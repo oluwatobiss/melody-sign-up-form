@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@font-face {
+  font-family: "Norse Bold";
+  src: url("./assets/Norse-Bold.otf");
+}
+
+:root {
+  --main-node-left-space: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: gray;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+select {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+aside {
+  background-color: pink;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+}
+
+#logo-section {
+  background-color: brown;
+  height: calc(100% / 3);
+  display: flex;
+}
+
+#app-name {
+  width: 100%;
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  align-self: flex-end;
+  font-family: "Norse Bold";
+  font-size: 3.7rem;
+}
+
+footer {
+  display: flex;
+  align-items: flex-end;
+  background-color: yellow;
+  flex-grow: 1;
+  padding-bottom: 20px;
+}
+
+footer span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+footer span:last-child {
+  border-left: 1px solid black;
+}
+
+main {
+  flex-grow: 1;
+}
+
+#about-app {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: blue;
+  height: calc(100% / 3);
+  padding-bottom: 2.7rem;
+  padding-left: var(--main-node-left-space);
+  font-size: 1.1rem;
+}
+
+#about-app div:last-child {
+  padding-top: 20px;
+}
+
+#form-section {
+  background-color: white;
+  padding: 15px 17rem 23px var(--main-node-left-space);
+}
+
+#form-heading {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+#form-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 3.5rem;
+}
+
+label {
+  font-size: 0.63rem;
+  text-transform: uppercase;
+  margin-top: 17px;
+}
+
+input {
+  width: 100%;
+  height: 37px;
+}
+
+button {
+  margin: 27px var(--main-node-left-space);
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#login {
+  margin-left: var(--main-node-left-space);
+  font-size: 0.9rem;
+}
+
+a {
+  text-decoration: none;
+}

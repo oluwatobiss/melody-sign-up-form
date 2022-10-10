@@ -5,59 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Melody Sign-up Form</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div>Theme</div>
-    <section>
-      <div>MELODY</div>
-      <footer><span>Credit</span>|<span>Author</span></footer>
-    </section>
-    <section>
-      <article>
-        <p>
+    <select>
+      <option value="">Appearance</option>
+      <option value="system">Device theme</option>
+      <option value="light">Light theme</option>
+      <option value="dark">Dark theme</option>
+    </select>
+    <aside>
+      <section id="logo-section"><div id="app-name">Melody</div></section>
+      <footer><span>Credit</span><span>Author</span></footer>
+    </aside>
+    <main>
+      <article id="about-app">
+        <div>
           This is not a real online service! You know you need something like
-          this in your life to help you realize your deepest dreams. Sign up now
-          to get started.
-        </p>
-        <p>You know you want to.</p>
+          this in your life to help you realize your deepest dreams.
+        </div>
+        <div>Sign up <em>now</em> to get started.</div>
+        <div>You <em>know</em> you want to.</div>
       </article>
       <form action="#" method="post">
-        <article>
-          <p>Let's do this!</p>
-          <div>
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name" name="first-name" />
-          </div>
-          <div>
-            <label for="last-name">Last name</label>
-            <input type="text" id="last-name" name="last-name" />
-          </div>
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
-          </div>
-          <div>
-            <label for="phone-number">Phone number</label>
-            <input type="tel" id="phone-number" name="phone-number" />
-          </div>
-          <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" />
-          </div>
-          <div>
-            <label for="confirm-password">Confirm password</label>
-            <input
-              type="password"
-              id="confirm-password"
-              name="confirm-password"
-            />
-          </div>
-        </article>
+        <section id="form-section">
+          <h3 id="form-heading">Let's do this!</h3>
+          <article id="form-inputs">
+            <div>
+              <label for="first-name">First name</label>
+              <input type="text" id="first-name" name="first-name" />
+            </div>
+            <div>
+              <label for="last-name">Last name</label>
+              <input type="text" id="last-name" name="last-name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div>
+              <label for="phone-number">Phone number</label>
+              <input type="tel" id="phone-number" name="phone-number" />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" />
+            </div>
+            <div>
+              <label for="confirm-password">Confirm password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+              />
+            </div>
+          </article>
+        </section>
         <button>Create Account</button>
-        <p>
-          Already have an account? <a href="#"><strong>Log in</strong></a>
-        </p>
       </form>
-    </section>
+      <div id="login">
+        Already have an account? <a href="#"><strong>Log in</strong></a>
+      </div>
+    </main>
   </body>
 </html>
