@@ -40,6 +40,7 @@ body {
 
 #appearance-btn {
   border-radius: 3px;
+  width: max-content;
 }
 
 #appearance-btn:hover,
@@ -49,6 +50,7 @@ body {
 }
 
 #theme-options {
+  visibility: hidden;
   background-color: var(--yellow-green);
   border: 1px solid var(--treasure-sland-lighter);
   border-radius: 5px;
@@ -268,6 +270,7 @@ button {
   font-weight: bold;
   background-color: var(--treasure-sland);
   color: var(--light-yellow);
+  cursor: pointer;
 }
 
 #login {
