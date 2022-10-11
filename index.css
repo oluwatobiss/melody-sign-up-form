@@ -34,6 +34,7 @@ select {
 }
 
 aside {
+  background-color: var(--treasure-sland);
   background-image: url(./assets/fantasy-6305036_1920.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,12 +52,17 @@ aside {
 #app-name {
   align-self: flex-end;
   width: 100%;
-  padding: 20px 0;
-  background-color: rgba(72, 73, 60, 0.7);
+  padding: 40px 0;
+  /* background-color: rgba(72, 73, 60, 0.53); */
+  background-image: url(./assets/melody-159863_1280.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: var(--light-yellow);
   text-align: center;
   font-family: "Norse Bold";
-  font-size: 3.7rem;
+  font-size: 5.5rem;
+  -webkit-text-stroke: 1px black;
 }
 
 footer {
