@@ -6,17 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Melody Sign-up Form</title>
     <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <select>
-      <option value="">Appearance</option>
-      <option value="system">Device theme</option>
-      <option value="light">Light theme</option>
-      <option value="dark">Dark theme</option>
-    </select>
+    <article id="theme-choice">
+      <div id="appearance-btn" class="theme-option">
+        <span class="material-icons md-18">light_mode</span
+        ><span class="theme-name">Appearance</span>
+      </div>
+      <div id="theme-options">
+        <div id="device-theme" class="theme-option">
+          <span class="material-icons md-18">contrast</span
+          ><span class="theme-name">Device theme</span>
+        </div>
+        <div id="light-theme" class="theme-option selected-theme">
+          <span class="material-icons md-18">light_mode</span
+          ><span class="theme-name">Light theme</span>
+        </div>
+        <div id="dark-theme" class="theme-option">
+          <span class="material-icons md-18">dark_mode</span
+          ><span class="theme-name">Dark theme</span>
+        </div>
+      </div>
+    </article>
     <aside>
       <section id="logo-section"><div id="app-name">Melody</div></section>
-      <footer><span>Credit</span><span>Author</span></footer>
+      <footer>
+        <span class="tooltip"
+          >Credit<span class="tooltiptext"
+            ><ul>
+              <li>
+                Flower Photo by
+                <a href="https://pixabay.com/users/willgard-4665627/"
+                  >Willgard Krause</a
+                >
+                on <a href="https://pixabay.com/">Pixabay</a>
+              </li>
+              <li>
+                Rainbow Photo by
+                <a href="https://pixabay.com/users/openclipart-vectors-30363/"
+                  >OpenClipart</a
+                >
+                on <a href="https://pixabay.com/">Pixabay</a>
+              </li>
+            </ul>
+          </span></span
+        ><span class="tooltip"
+          >Author
+          <span class="tooltiptext"
+            >App Created by
+            <a href="https://codesweetly.com/">Oluwatobi Sofela</a></span
+          ></span
+        >
+      </footer>
     </aside>
     <main>
       <article id="about-app">
