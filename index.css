@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 @font-face {
   font-family: "Norse Bold";
@@ -12,6 +12,7 @@
   --light-yellow: #f5f6e0;
   --treasure-sland: #48493c;
   --treasure-sland-lighter: #7c7e67;
+  --error: #fe9090;
 }
 
 * {
@@ -27,7 +28,7 @@ body {
 body {
   background-color: var(--yellow-green);
   display: flex;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 #theme-choice {
@@ -108,7 +109,7 @@ aside {
   color: var(--light-yellow);
   text-align: center;
   font-family: "Norse Bold";
-  font-size: 5.5rem;
+  font-size: 5.7rem;
   -webkit-text-stroke: 1px black;
 }
 
@@ -210,23 +211,53 @@ main {
 
 label {
   display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-top: 17px;
+  margin-bottom: 5px;
 }
 
 #form-inputs {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 50%);
   column-gap: 3.5rem;
-}
-
-label {
-  font-size: 0.63rem;
-  text-transform: uppercase;
-  margin-top: 17px;
 }
 
 input {
   width: 100%;
-  height: 37px;
+  height: 38px;
+  border: 1px solid var(--yellow-green);
+  border-radius: 5px;
+  padding: 0 7px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #9098fe;
+  border-left: 4px solid #9098fe;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+input:focus.error {
+  border: 1px solid var(--error);
+  border-left: 4px solid var(--error);
+}
+
+input:focus.success {
+  border: 1px solid #90fe90;
+  border-left: 4px solid #90fe90;
+}
+
+.input-feedback {
+  visibility: hidden;
+  font-size: 0.7rem;
+  color: red;
+}
+
+.error-message {
+  visibility: visible;
 }
 
 button {
