@@ -7,6 +7,8 @@
 
 :root {
   --main-node-left-space: 2.5rem;
+  --light-yellow: #f5f6e0;
+  --treasure-sland: #48493c;
 }
 
 * {
@@ -20,7 +22,7 @@ body {
 }
 
 body {
-  background-color: gray;
+  background-color: #d6d6af;
   display: flex;
   font-family: "Roboto", sans-serif;
 }
@@ -50,8 +52,8 @@ aside {
   align-self: flex-end;
   width: 100%;
   padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: rgba(72, 73, 60, 0.7);
+  color: var(--light-yellow);
   text-align: center;
   font-family: "Norse Bold";
   font-size: 3.7rem;
@@ -62,6 +64,7 @@ footer {
   align-items: flex-end;
   flex-grow: 1;
   padding-bottom: 20px;
+  color: var(--light-yellow);
 }
 
 footer span {
@@ -70,7 +73,7 @@ footer span {
 }
 
 footer span:last-child {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--light-yellow);
 }
 
 main {
@@ -82,7 +85,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: blue;
   height: calc(100% / 3);
   padding-bottom: 2.7rem;
   padding-left: var(--main-node-left-space);
@@ -96,6 +98,7 @@ main {
 #form-section {
   background-color: white;
   padding: 15px 17rem 23px var(--main-node-left-space);
+  box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.23), 0px 12px 20px rgba(0, 0, 0, 0.19);
 }
 
 #form-heading {
@@ -130,6 +133,8 @@ button {
   border: 0;
   border-radius: 5px;
   font-weight: bold;
+  background-color: var(--treasure-sland);
+  color: var(--light-yellow);
 }
 
 #login {
@@ -137,6 +142,7 @@ button {
   font-size: 0.9rem;
 }
 
-a {
+#login a {
   text-decoration: none;
+  color: var(--treasure-sland);
 }
