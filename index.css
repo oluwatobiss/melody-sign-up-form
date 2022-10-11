@@ -120,13 +120,62 @@ footer {
   color: var(--light-yellow);
 }
 
-footer span {
+.tooltip {
   flex-grow: 1;
   text-align: center;
+  position: relative;
+  display: inline-block;
 }
 
-footer span:last-child {
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip:last-child {
   border-left: 1px solid var(--light-yellow);
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: rgba(254, 213, 143, 0.77);
+  border: 1px solid black;
+  border-radius: 6px;
+  margin-bottom: 3px;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 100%;
+  left: 7%;
+  z-index: 1;
+  text-align: left;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 37%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip a {
+  text-decoration: none;
+  color: navy;
 }
 
 main {
