@@ -1,3 +1,5 @@
+const appearanceBtn = document.getElementById("appearance-btn");
+const themeOptions = document.getElementById("theme-options");
 const firstNameInput = document.getElementById("first-name");
 const lastNameInput = document.getElementById("last-name");
 const emailInput = document.getElementById("email");
@@ -9,6 +11,7 @@ const passwordErrorText = document.getElementById("password-error");
 const confirmPasswordInput = document.getElementById("confirm-password");
 const confirmationErrorText = document.getElementById("confirmation-error");
 
+appearanceBtn.addEventListener("click", handleClick);
 firstNameInput.addEventListener("blur", handleBlur);
 lastNameInput.addEventListener("blur", handleBlur);
 emailInput.addEventListener("blur", handleBlur);
@@ -19,6 +22,10 @@ passwordInput.addEventListener("blur", handleBlur);
 passwordInput.addEventListener("focus", handleFocus);
 confirmPasswordInput.addEventListener("blur", handleBlur);
 confirmPasswordInput.addEventListener("focus", handleFocus);
+
+function handleClick() {
+  themeOptions.style.visibility = "visible";
+}
 
 function handleBlur(e) {
   const blurredInput = e.target.id;
