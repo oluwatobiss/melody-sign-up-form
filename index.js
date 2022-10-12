@@ -80,20 +80,20 @@ function handleBlur(e) {
 
 function handleFocus(e) {
   const focusedInput = e.target.id;
-
-  if (focusedInput === "email") {
-    emailErrorText.style.visibility = "hidden";
-  }
-
-  if (focusedInput === "phone-number") {
-    phoneNumberErrorText.style.visibility = "hidden";
-  }
-
-  if (focusedInput === "password") {
-    passwordErrorText.style.visibility = "hidden";
-  }
-
-  if (focusedInput === "confirm-password") {
-    confirmationErrorText.style.visibility = "hidden";
+  switch (focusedInput) {
+    case "email":
+      emailErrorText.style.visibility = "hidden";
+      break;
+    case "phone-number":
+      phoneNumberErrorText.style.visibility = "hidden";
+      break;
+    case "password":
+      passwordErrorText.style.visibility = "hidden";
+      break;
+    case "confirm-password":
+      confirmationErrorText.style.visibility = "hidden";
+      break;
+    default:
+      console.error("Can't find a case for " + focusedInput);
   }
 }
