@@ -25,6 +25,7 @@ confirmPasswordInput.addEventListener("blur", handleBlur);
 confirmPasswordInput.addEventListener("focus", handleFocus);
 
 function handleBodyClick(e) {
+  const appearanceIcon = document.getElementById("appearance-icon");
   const themeOptionsIsActive = [...themeOptions.classList].includes("visible");
   const clickedAppearanceBtn = e.target.closest("#appearance-btn");
   const clickedThemeOptionsModal = e.target.id === "theme-options";
@@ -46,8 +47,30 @@ function handleBodyClick(e) {
   }
 
   if (clickedThemeOptionItem) {
+    const root = document.documentElement;
     themeOptionItem.forEach((i) => i.classList.remove("selected-theme"));
     clickedThemeOptionItem.classList.add("selected-theme");
+
+    if (clickedThemeOptionItem.id === "light-theme") {
+      appearanceIcon.innerText = "light_mode";
+      root.classList.add("light");
+      root.classList.remove("dark");
+      root.classList.remove("device");
+    }
+
+    if (clickedThemeOptionItem.id === "dark-theme") {
+      appearanceIcon.innerText = "dark_mode";
+      root.classList.add("dark");
+      root.classList.remove("light");
+      root.classList.remove("device");
+    }
+
+    if (clickedThemeOptionItem.id === "device-theme") {
+      appearanceIcon.innerText = "contrast";
+      root.classList.add("device");
+      root.classList.remove("light");
+      root.classList.remove("dark");
+    }
   }
 }
 
