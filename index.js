@@ -1,6 +1,6 @@
 const bodyEle = document.querySelector("body");
-const appearanceBtn = document.getElementById("appearance-btn");
 const themeOptions = document.getElementById("theme-options");
+const themeOptionItem = document.querySelectorAll(".theme-option");
 const firstNameInput = document.getElementById("first-name");
 const lastNameInput = document.getElementById("last-name");
 const emailInput = document.getElementById("email");
@@ -13,7 +13,6 @@ const confirmPasswordInput = document.getElementById("confirm-password");
 const confirmationErrorText = document.getElementById("confirmation-error");
 
 bodyEle.addEventListener("click", handleBodyClick);
-appearanceBtn.addEventListener("click", handleApperanceBtnClick);
 firstNameInput.addEventListener("blur", handleBlur);
 lastNameInput.addEventListener("blur", handleBlur);
 emailInput.addEventListener("blur", handleBlur);
@@ -27,6 +26,7 @@ confirmPasswordInput.addEventListener("focus", handleFocus);
 
 function handleBodyClick(e) {
   const themeOptionsIsActive = [...themeOptions.classList].includes("visible");
+  const clickedAppearanceBtn = e.target.closest("#appearance-btn");
   const clickedThemeOptionsModal = e.target.id === "theme-options";
   const clickedThemeOptionItem = e.target.closest(".theme-option");
 
@@ -35,14 +35,20 @@ function handleBodyClick(e) {
     !clickedThemeOptionsModal &&
     !clickedThemeOptionItem
   ) {
+    themeOptions.classList.remove("visible");
+    themeOptions.classList.add("hidden");
+    return;
+  }
+
+  if (clickedAppearanceBtn) {
     themeOptions.classList.toggle("hidden");
     themeOptions.classList.toggle("visible");
   }
-}
 
-function handleApperanceBtnClick() {
-  themeOptions.classList.toggle("hidden");
-  themeOptions.classList.toggle("visible");
+  if (clickedThemeOptionItem) {
+    themeOptionItem.forEach((i) => i.classList.remove("selected-theme"));
+    clickedThemeOptionItem.classList.add("selected-theme");
+  }
 }
 
 function handleBlur(e) {
