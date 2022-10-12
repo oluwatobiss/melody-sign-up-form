@@ -242,12 +242,12 @@ input:focus {
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-input:focus.error {
+.error {
   border: 1px solid var(--error);
   border-left: 4px solid var(--error);
 }
 
-input:focus.success {
+.success {
   border: 1px solid #90fe90;
   border-left: 4px solid #90fe90;
 }
