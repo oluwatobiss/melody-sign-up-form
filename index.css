@@ -50,7 +50,6 @@ body {
 }
 
 #theme-options {
-  visibility: hidden;
   background-color: var(--yellow-green);
   border: 1px solid var(--treasure-sland-lighter);
   border-radius: 5px;
@@ -58,6 +57,14 @@ body {
   padding: 10px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .theme-option {
