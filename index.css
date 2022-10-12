@@ -5,6 +5,10 @@
   src: url("./assets/Norse-Bold.otf");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-element-left-space: 2.5rem;
 }
@@ -29,18 +33,15 @@
   --primary-image: url(./assets/images/fence-6021401_1920.jpg);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
+html {
   height: 100%;
-  margin: 0;
 }
 
 body {
   display: flex;
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
   background-color: var(--primary-color);
   color: var(--primary-text);
   font-family: "Lato", sans-serif;
@@ -58,17 +59,17 @@ body {
   width: max-content;
 }
 
-#appearance-btn:hover,
-.theme-option:hover {
-  background-color: rgba(72, 73, 60, 0.17);
-  cursor: pointer;
-}
-
 #appearance-btn,
 .theme-option {
   display: flex;
   align-items: center;
   padding: 7px 25px;
+}
+
+#appearance-btn:hover,
+.theme-option:hover {
+  background-color: rgba(72, 73, 60, 0.17);
+  cursor: pointer;
 }
 
 #theme-options {
@@ -93,10 +94,7 @@ body {
   visibility: hidden;
 }
 
-.selected-theme {
-  background-color: var(--primary-color-light);
-}
-
+.selected-theme,
 .selected-theme:hover {
   background-color: var(--primary-color-light);
 }
@@ -121,8 +119,8 @@ aside {
 }
 
 #logo-section {
-  height: calc(100% / 3);
   display: flex;
+  height: calc(100% / 3);
 }
 
 #app-name {
