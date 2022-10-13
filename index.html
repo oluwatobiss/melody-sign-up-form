@@ -82,6 +82,7 @@
               <input
                 type="text"
                 id="first-name"
+                class="regular-input"
                 name="first-name"
                 placeholder="Forename"
                 required
@@ -92,6 +93,7 @@
               <input
                 type="text"
                 id="last-name"
+                class="regular-input"
                 name="last-name"
                 placeholder="Surname"
                 required
@@ -102,11 +104,13 @@
               <input
                 type="email"
                 id="email"
+                class="regular-input"
                 name="email"
                 placeholder="username@domain.com"
+                pattern="^([\w\.-]+)@([\w-]+)\.([a-z]){2,8}(\.[a-z]{2,8})?$"
                 required
               />
-              <div id="email-error" class="input-feedback">
+              <div id="email-error" class="error-message">
                 *Please enter a valid email
               </div>
             </div>
@@ -115,18 +119,28 @@
               <input
                 type="tel"
                 id="phone-number"
+                class="regular-input"
                 name="phone-number"
                 placeholder="7017774209"
+                pattern="^\+?[\d]{4,20}$"
                 required
               />
-              <div id="phone-number-error" class="input-feedback">
+              <div id="phone-number-error" class="error-message">
                 *Please enter a valid number
               </div>
             </div>
             <div>
               <label for="password">Password</label>
-              <input type="password" id="password" name="password" required />
-              <div id="password-error" class="input-feedback">
+              <input
+                type="password"
+                id="password"
+                class="regular-input"
+                name="password"
+                placeholder=" "
+                pattern="^[.\S]{8,}$"
+                required
+              />
+              <div id="password-error" class="error-message">
                 *Passwords need to be at least eight characters
               </div>
             </div>
@@ -136,9 +150,10 @@
                 type="password"
                 id="confirm-password"
                 name="confirm-password"
+                placeholder=" "
                 required
               />
-              <div id="confirmation-error" class="input-feedback">
+              <div id="confirmation-error" class="error-message">
                 *Passwords do not match
               </div>
             </div>

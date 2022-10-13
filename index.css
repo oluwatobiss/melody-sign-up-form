@@ -86,14 +86,6 @@ body {
   border-radius: 5px;
 }
 
-.visible {
-  visibility: visible;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
 .selected-theme,
 .selected-theme:hover {
   background-color: var(--primary-color-light);
@@ -277,23 +269,30 @@ input:focus {
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
+input:not(:focus):not(:placeholder-shown):invalid,
 .error {
   border: 1px solid #fe9090;
   border-left: 4px solid #fe9090;
 }
 
-.success {
-  border: 1px solid #90fe90;
-  border-left: 4px solid #90fe90;
-}
-
-.input-feedback {
+.error-message {
   visibility: hidden;
   font-size: 0.7rem;
   color: red;
 }
 
-.error-message {
+input:focus:not(:placeholder-shown):invalid + .error-message {
+  visibility: visible;
+}
+
+.success,
+.regular-input:valid,
+#confirm-password:focus.success {
+  border: 1px solid #90fe90;
+  border-left: 4px solid #90fe90;
+}
+
+#confirm-password.error:focus + .error-message {
   visibility: visible;
 }
 
@@ -316,6 +315,14 @@ button {
 #login a {
   text-decoration: none;
   color: var(--accent-color);
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 @media (prefers-color-scheme: light) {
