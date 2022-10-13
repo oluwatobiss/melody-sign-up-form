@@ -1,3 +1,7 @@
+/*****************/
+/* GLOBAL RULES */
+/*****************/
+
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 @font-face {
@@ -33,19 +37,18 @@
   --primary-image: url(./assets/images/fence-6021401_1920.jpg);
 }
 
-html {
-  height: 100%;
-}
-
 body {
   display: flex;
   margin: 0;
-  width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: var(--primary-color);
   color: var(--primary-text);
   font-family: "Lato", sans-serif;
 }
+
+/*****************/
+/* THEME RULES */
+/*****************/
 
 #theme-choice {
   position: fixed;
@@ -98,6 +101,10 @@ body {
 .theme-name {
   padding-left: 5px;
 }
+
+/*************************/
+/* ASIDE SECTION RULES */
+/*************************/
 
 aside {
   background-color: var(--accent-color);
@@ -208,8 +215,13 @@ ul {
   color: navy;
 }
 
+/************************/
+/* MAIN SECTION RULES */
+/************************/
+
 main {
-  flex-grow: 1;
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr;
 }
 
 #about-app {
@@ -217,7 +229,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: calc(100% / 3);
   padding-bottom: 2.7rem;
   padding-left: var(--main-element-left-space);
   font-size: 1.1rem;
@@ -227,10 +238,11 @@ main {
   padding-top: 20px;
 }
 
-#form-section {
+#melody-form {
   background-color: var(--secondary-color);
-  padding: 15px 17rem 23px var(--main-element-left-space);
+  padding: 15px 17rem 20px var(--main-element-left-space);
   box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.23), 0px 12px 20px rgba(0, 0, 0, 0.19);
+  height: max-content;
 }
 
 #form-heading {
@@ -269,19 +281,21 @@ input:focus {
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-input:not(:focus):not(:placeholder-shown):invalid,
-.error {
+.error,
+input:not(:focus):not(:placeholder-shown):invalid {
   border: 1px solid #fe9090;
   border-left: 4px solid #fe9090;
 }
 
 .error-message {
   visibility: hidden;
+  margin-top: 5px;
   font-size: 0.7rem;
-  color: red;
+  color: #ff4040;
 }
 
-input:focus:not(:placeholder-shown):invalid + .error-message {
+input:focus:not(:placeholder-shown):invalid + .error-message,
+#confirm-password.error:focus + .error-message {
   visibility: visible;
 }
 
@@ -292,12 +306,8 @@ input:focus:not(:placeholder-shown):invalid + .error-message {
   border-left: 4px solid #90fe90;
 }
 
-#confirm-password.error:focus + .error-message {
-  visibility: visible;
-}
-
 button {
-  margin: 27px var(--main-element-left-space);
+  margin: 17px 0 15px var(--main-element-left-space);
   padding: 10px 30px;
   border: 0;
   border-radius: 5px;
@@ -324,6 +334,10 @@ button {
 .hidden {
   visibility: hidden;
 }
+
+/***********************/
+/* MEDIA QUERIES RULES */
+/***********************/
 
 @media (prefers-color-scheme: light) {
   :root {

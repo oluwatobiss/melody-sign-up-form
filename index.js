@@ -35,25 +35,27 @@ function handleBodyClick(e) {
     themeOptionItem.forEach((i) => i.classList.remove("selected-theme"));
     clickedThemeOptionItem.classList.add("selected-theme");
 
-    if (clickedThemeOptionItem.id === "light-theme") {
-      appearanceIcon.innerText = "light_mode";
-      root.classList.add("light");
-      root.classList.remove("dark");
-      root.classList.remove("device");
-    }
-
-    if (clickedThemeOptionItem.id === "dark-theme") {
-      appearanceIcon.innerText = "dark_mode";
-      root.classList.add("dark");
-      root.classList.remove("light");
-      root.classList.remove("device");
-    }
-
-    if (clickedThemeOptionItem.id === "device-theme") {
-      appearanceIcon.innerText = "contrast";
-      root.classList.add("device");
-      root.classList.remove("light");
-      root.classList.remove("dark");
+    switch (clickedThemeOptionItem.id) {
+      case "light-theme":
+        appearanceIcon.innerText = "light_mode";
+        root.classList.add("light");
+        root.classList.remove("dark");
+        root.classList.remove("device");
+        break;
+      case "dark-theme":
+        appearanceIcon.innerText = "dark_mode";
+        root.classList.remove("light");
+        root.classList.add("dark");
+        root.classList.remove("device");
+        break;
+      case "device-theme":
+        appearanceIcon.innerText = "contrast";
+        root.classList.remove("light");
+        root.classList.remove("dark");
+        root.classList.add("device");
+        break;
+      default:
+        console.error("Error with selected theme");
     }
   }
 }
